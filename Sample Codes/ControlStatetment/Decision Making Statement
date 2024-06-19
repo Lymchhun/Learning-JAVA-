@@ -1,1 +1,149 @@
+//Basic Java Course - Control Statement (TEED Gen8)
+package com.mycompany.controlstatement;
+
+public class ControlStatement {
+
+    public static void main(String[] args) {
+        System.out.println("\n\t\t======< Control Statement >==========");
+        System.out.println("\n\t\t======< Decision-making Statement >==========");
+        
+        /*
+        //===================< If-Else >=================
+        //Grade result (Pass/Fail)
+        float Score;
+        Score = 49.9f;
+        
+        //Set condition
+        if(Score >=50 && Score<=100) //If your score exceed or equal 50 and below or equal 100 ==> You Pass
+        {
+            System.out.println("\n\t\tYou pass your exam");
+        }
+        else
+        {
+            System.out.println("You fail your exam");
+        }
+        //==================================================================
+        */
+        
+        /*
+        //===================< Nested If >=================
+        //Grade result(Best, Good, Bad, worst)
+        float Score;
+        Score = 30.5f;
+        
+        //Set condition
+        //For students who pass the test
+        if(Score >=50 && Score<=100) //If your score exceed or equal 50 and below or equal 100 ==> You Pass
+        {
+            System.out.println("\n\t\tYou pass your exam");
+            //Best grade (Score 75 - 100)
+            if(Score >=75 && Score<=100)
+            {
+                System.out.println("\t\t You Got Best Grade");
+            }
+            //Good grade(score 50 - 75)
+            else
+            {
+                System.out.println("\t\t You got Good Grade");
+            }
+        }
+        //For students who fail the test
+        else
+        {
+            System.out.println("You fail your exam");
+            //Bad grade (Score 75 - 100)
+            if(Score >=35 && Score<=50)
+            {
+                System.out.println("\t\t You Got Bad Grade");
+            }
+            //Worst grade(score 50 - 75)
+            else
+            {
+                System.out.println("\t\t You got worst Grade");
+            }
+        }
+        //==================================================================
+        */
+        
+        /*
+        //===================< If and else if >=================
+        //Grade result (Grade A, B, C, D, E, F)
+        float Score;
+        Score = 78.3f;
+        
+        //Set condition
+        //Grade A
+        if(Score >=85 && Score<=100) 
+        {
+            System.out.println("\n\t\tYou got grade A");
+        }
+        else if(Score >=75 && Score <85)
+        {
+            System.out.println("\n\t\t You got grade B");
+        }
+        else if(Score >=65 && Score <75)
+        {
+            System.out.println("\n\t\t You got grade C");
+        }
+        else if(Score >=55 && Score <65)
+        {
+            System.out.println("\n\t\t You got grade D");
+        }
+        else if(Score >=50 && Score <55)
+        {
+            System.out.println("\n\t\t You got grade E");
+        }
+        else
+        {
+            System.out.println("You fail your exam");
+        }
+        //==================================================================
+        */
+                
+        /*
+        //===================< Ternary Operator >=================
+        // Initialize variables x and y with values 10 and 20 respectively
+        int x = 10;
+        int y = 30;
+
+        // Use the ternary operator to assign the larger value between x and y to max
+        // If x is greater than y, max gets assigned the value of x; otherwise, max gets assigned the value of y
+        int max = (x > y) ? x : y;
+
+        // Print the result to the console
+        System.out.println("The maximum value is: " + max);
+        //==================================================================
+        */
+        
+        /*
+        //===================< Switch statement >=================
+        float score = 100f;
+
+        // Convert score to an integer (rounding down) for use in switch statement
+        int scoreInt = (int) score / 10;
+
+        switch (scoreInt) {
+            case 10:
+            case 9:
+                System.out.println("You got grade A");
+                break;
+            case 8:
+                System.out.println("You got grade B");
+                break;
+            case 7:
+                System.out.println("You got grade C");
+                break;
+            case 6:
+                System.out.println("You got grade D");
+                break;
+            case 5:
+                System.out.println("You got grade E");
+                break;
+            default:
+                System.out.println("You fail your exam");
+        }
+        //==================================================================
+        */
+    }
+}
 
