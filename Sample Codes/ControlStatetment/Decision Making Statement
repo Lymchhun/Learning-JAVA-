@@ -1,149 +1,343 @@
-//Basic Java Course - Control Statement (TEED Gen8)
 package com.mycompany.controlstatement;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class ControlStatement {
 
     public static void main(String[] args) {
         System.out.println("\n\t\t======< Control Statement >==========");
+        
+        /*
         System.out.println("\n\t\t======< Decision-making Statement >==========");
-        
-        /*
-        //===================< If-Else >=================
-        //Grade result (Pass/Fail)
+        //==============< If else >================
+        //Result of the examination
+        // Pass and Fail (Maximum 100)
+        // Pass (above 50) and Fail (below 50)
         float Score;
-        Score = 49.9f;
+        Score = 49.9f;//variable score
         
-        //Set condition
-        if(Score >=50 && Score<=100) //If your score exceed or equal 50 and below or equal 100 ==> You Pass
+        //set condition
+        //Range from 50 to 100
+        if(Score >=50 && Score <=100)//if students get score above or equal 50 and also below or equal 100 ==> Pass
         {
-            System.out.println("\n\t\tYou pass your exam");
+            System.out.println("\t\t He pass the exam"); //executed code when it meet the conditions
         }
+        
+        //If it doesn't meet with the abvoe conditon, it will automatically meet the second condition
         else
         {
-            System.out.println("You fail your exam");
+            System.out.println("\t\t He fail the exam");
         }
-        //==================================================================
         */
         
-        /*
+   /*
         //===================< Nested If >=================
-        //Grade result(Best, Good, Bad, worst)
-        float Score;
-        Score = 30.5f;
+        // Check the ability of the students
+        // (Best, Good, bad, worst)
+        float Score = 78.3f;
         
-        //Set condition
-        //For students who pass the test
-        if(Score >=50 && Score<=100) //If your score exceed or equal 50 and below or equal 100 ==> You Pass
+        //set condition
+        //=====================< First condition - Pass >=================
+        
+        // If-else statement ==> focus only 2 conditions (True) && (false)
+        if(Score >=50 && Score <=100)//if students get score above or equal 50 and also below or equal 100 ==> Pass
         {
-            System.out.println("\n\t\tYou pass your exam");
-            //Best grade (Score 75 - 100)
-            if(Score >=75 && Score<=100)
-            {
-                System.out.println("\t\t You Got Best Grade");
+            System.out.println("\t\t He pass the exam"); //executed code when it meet the conditions
+            
+            //==================< condition 1 of the first condition >===================
+            if(Score >= 75 && Score <=100) //Range (75 - 100) ==> grade = Best
+            {if(Score >=50 && Score <=100)//if students get score above or equal 50 and also below or equal 100 ==> Pass
+        {
+            System.out.println("\t\t He pass the exam"); //executed code when it meet the conditions
+            
+           
+            //==================< condition 1 of the first condition >===================
+            if(Score >= 75
+                System.out.println("\t\t He gets Best grade");
+                if(Score >=90 && Score <=100) //Score ranges from 90 - 100
+                {
+                    System.out.println("\t\tHe gets honour award");
+                }
+                else //range 75 - 90
+                {
+                    System.out.println("\t\tHe doesn't get honour award");
+                }
+                
             }
-            //Good grade(score 50 - 75)
+            
+            //==================< condition 2 of the first condition >============
             else
             {
-                System.out.println("\t\t You got Good Grade");
+                System.out.println("\t\t He gets good grade");
             }
         }
-        //For students who fail the test
+        
+        
+        //If it doesn't meet with the abvoe conditon, it will automatically meet the second condition
+        //=======================< Second Condition >===========================
         else
         {
-            System.out.println("You fail your exam");
-            //Bad grade (Score 75 - 100)
-            if(Score >=35 && Score<=50)
-            {
-                System.out.println("\t\t You Got Bad Grade");
-            }
-            //Worst grade(score 50 - 75)
-            else
-            {
-                System.out.println("\t\t You got worst Grade");
-            }
+            System.out.println("\t\t He fail the exam");
         }
         //==================================================================
         */
-        
+   
+   
+   
+   
         /*
         //===================< If and else if >=================
         //Grade result (Grade A, B, C, D, E, F)
         float Score;
-        Score = 78.3f;
+        Score = 87.2f;
+        //set grade for the score 
+        //grades: A, B, C, D, E, F= fail
         
-        //Set condition
-        //Grade A
-        if(Score >=85 && Score<=100) 
+        //Grade A: 85 - 100
+        if(Score >=85 && Score<=100)
         {
-            System.out.println("\n\t\tYou got grade A");
+            System.out.println("\t\t Student got grade A");
         }
+        
+        //Grade B: 75-85 
         else if(Score >=75 && Score <85)
         {
-            System.out.println("\n\t\t You got grade B");
+             System.out.println("\t\t Student got grade B");   
         }
-        else if(Score >=65 && Score <75)
+        //Grade C: 65 - 75
+        else if(Score >=65 && Score<75)
         {
-            System.out.println("\n\t\t You got grade C");
+            System.out.println("\t\t Student got grade C");
         }
-        else if(Score >=55 && Score <65)
+        //Grade D: 55 - 65
+        else if(Score >=65 && Score<75)
         {
-            System.out.println("\n\t\t You got grade D");
+            System.out.println("\t\t Student got grade D");
         }
-        else if(Score >=50 && Score <55)
+        //Grade E: 50 - 55
+        else if(Score >=65 && Score<75)
         {
-            System.out.println("\n\t\t You got grade E");
+            System.out.println("\t\t Student got grade E");
         }
         else
         {
-            System.out.println("You fail your exam");
+            System.out.println("\t\t Student Fails the exam");
         }
+
         //==================================================================
         */
-                
+        
         /*
         //===================< Ternary Operator >=================
         // Initialize variables x and y with values 10 and 20 respectively
         int x = 10;
-        int y = 30;
+        int y = 5;
+        
 
         // Use the ternary operator to assign the larger value between x and y to max
         // If x is greater than y, max gets assigned the value of x; otherwise, max gets assigned the value of y
+        //if x > y, max = x
+        //else
         int max = (x > y) ? x : y;
 
         // Print the result to the console
-        System.out.println("The maximum value is: " + max);
+        System.out.printf("\t\tThe maximum value is: %d", max);
         //==================================================================
         */
         
-        /*
+        
         //===================< Switch statement >=================
-        float score = 100f;
+        /*
+        float score = 100.00f;
 
         // Convert score to an integer (rounding down) for use in switch statement
-        int scoreInt = (int) score / 10;
+        int scoreInt = (int)(score/10);//90.5/10 ==> 9.05==> 9
 
         switch (scoreInt) {
             case 10:
             case 9:
-                System.out.println("You got grade A");
+                System.out.println("\t\tYou got grade A");
                 break;
             case 8:
-                System.out.println("You got grade B");
+                System.out.println("\t\tYou got grade B");
                 break;
             case 7:
-                System.out.println("You got grade C");
+                System.out.println("\t\tYou got grade C");
                 break;
             case 6:
-                System.out.println("You got grade D");
+                System.out.println("\t\tYou got grade D");
                 break;
             case 5:
-                System.out.println("You got grade E");
+                System.out.println("\t\tYou got grade E");
                 break;
-            default:
-                System.out.println("You fail your exam");
+            default: //default functions similarly to else in if-else statement
+                System.out.println("\t\tYou fail your exam");
         }
         //==================================================================
         */
-    }
-}
+        
+        /*
+        //===============< Nested Switch >==========
+        int x = 2, y=5;
+        
+        //outer switch
+        switch(x)
+        {
+            //if x =1
+            case 1: 
+                System.out.println("\t\tCondition for x=1");
+                
+                //second condition for y
+                switch(y)
+                {
+                    //if y=2
+                    case 2: 
+                        System.out.println("\t\tchoice is 2");
+                        break;
+                        
+                    // if y =3
+                    case 3:
+                        System.out.println("\t\tchoice is 3");
+                        break;
+                    default:
+                        System.out.println("\t\tchoice is different from 2 and 3");
+                }
+                break;
+                
+                
+                
+                
+                
+                //if x=2
+                case 2: 
+                System.out.println("\t\tCondition for x=2");
+                
+                //second condition for y
+                switch(y)
+                {
+                    //if y=2
+                    case 2: 
+                        System.out.println("\t\tchoice is 2");
+                        break;
+                        
+                    // if y =3
+                    case 3:
+                        System.out.println("\t\tchoice is 3");
+                        break;
+                    default:
+                        System.out.println("\t\tchoice is different from 2 and 3");
+                }
+                break;
+             
+        }
+        */
+        
+        //System.out.println("\n\t\t======< Loop-Statement >==========");
+        /*
+        //======< While Statement >==========
+        
+        int i = 5;
+        while (i >= 0) //0,1,2,3,4,5
+        {
+        System.out.println("Iteration: " + i);
+        i--;//increment or decrement
+        }
+        */
+        //--> while loop is used when you want to check the condition before excuting the loop body
+        //=====================================
+        
+        
+        /*
+        //======< Do-While Statement >==========
+        int sum = 0;//Total or Summation
+        int number = 1;
 
+        do {
+            sum += number; // Add the current number to the sum
+            System.out.println("Number: " + number + ", Sum: " + sum);
+            number++; // Increment the number
+        } while (sum <= 100);
+
+        System.out.println("Final Sum: " + sum);
+        //=====================================
+        //Do-while is used when you need the loop body to execute at least once before checking the condition
+        */
+        
+        /*
+        //===============< For loop >=============
+        for (int i=10; i>=0; i--)//condtion end at i=10, with increment
+        {
+            System.out.println("Hello World : " + i);
+        } 
+        //=========================================
+        */
+        
+           /*
+        //================< For each loop >====================
+        Map<Integer, String> map = new HashMap<>();
+        map.put(1, "One");
+        map.put(2, "Two");
+        map.put(3, "Three");
+
+        for (Map.Entry<Integer, String> entry : map.entrySet()) 
+        {
+            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+        }
+        //=====================================================
+        */
+        
+        
+        System.out.println("\n\t\t======< Jump-Statement >==========");
+        /*
+        //==============< break >======================
+        for (int i = 0; i <= 10; i++) //i=0, end at i=5, (0,1,2,3,4)
+        {
+        if (i == 10) 
+        {
+            break; // Exit the loop when i equals 10
+        }
+        System.out.println("i: " + i);
+        }
+        System.out.println("Loop exited.");
+        */
+        //============================================================
+        
+        
+        /*
+        //=================< continue >============
+        for (int i = 1; i <= 5; i++)
+        {
+            if (i == 2) //set condition i=3
+            {
+                continue; // Skip or avoid printing when i equals 2
+            }
+            System.out.println("i: " + i);
+        }
+        System.out.println("Loop completed.");
+        //=========================================
+        */
+        
+       
+        //===============< return >================
+        int a = 5;
+        int b = 3;
+        
+        // Calling a method and storing the result using return statement
+        int result = calculateSumAndReturn(a, b);
+        
+        // Print the result obtained from the method
+        System.out.println("Result: " + result);
+        
+    }
+
+    // Method to calculate sum and return the result
+    public static int calculateSumAndReturn(int x, int y) //return type function = return value
+    {
+        // Calculate the sum
+        int sum = x + y;//set operation summation 
+        
+        // Return the sum
+        return sum;//The return statement is used to exit the method and send the value of sum back to the caller.
+    }
+    }
