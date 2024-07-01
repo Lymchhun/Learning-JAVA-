@@ -1,1 +1,93 @@
+package com.mycompany.basicjava;
+
+import java.util.Scanner;
+
+public class BasicJava {
+
+    public static void main(String[] args) {
+        
+        
+        Scanner scanner = new Scanner(System.in);//give name : scanner
+        
+        /*
+        //string input
+        System.out.println("What are your favorite foods?");
+        String inputfood = scanner.nextLine();
+        System.out.println("Your favorite foods are: "+ inputfood);
+        scanner.close();
+        */
+        
+        /*
+        //Integer
+        //let user knows what he needs to do
+        System.out.print("Enter your age ");
+        int inputInt = scanner.nextInt();
+        System.out.println("You entered: " + inputInt);
+        scanner.close();
+        */
+        
+        /*
+        //double
+        System.out.print("Enter your electricity bill: ");
+        double bills = scanner.nextDouble();
+        System.out.println("Your bills:  " + bills);
+        scanner.close();
+        */
+        
+        /*
+        //float
+        System.out.print("Enter a float: ");
+        float inputFloat = scanner.nextFloat();
+        
+        System.out.println("You entered: " + inputFloat);
+        scanner.close();
+        */
+        
+        /*
+        //boolean
+        System.out.print("Enter a boolean (true/false): ");
+        boolean inputBoolean = scanner.nextBoolean();
+        
+        System.out.println("You entered: " + inputBoolean);
+        scanner.close();
+        */
+        
+        
+        /*
+        //long
+        System.out.print("Enter a long: ");
+        long inputLong = scanner.nextLong();
+        System.out.println("You entered: " + inputLong);
+        scanner.close();
+        */
+        
+        /*
+        //short
+        System.out.print("Enter a short: ");
+        short inputShort = scanner.nextShort();
+        
+        System.out.println("You entered: " + inputShort);
+        scanner.close();
+        */
+        
+        /*
+        //byte
+        System.out.print("Enter a byte: ");
+        byte inputByte = scanner.nextByte();
+        System.out.println("You entered: " + inputByte);
+        scanner.close();
+        */
+        
+        /*
+        //single word(token)
+        System.out.print("Enter a single word: ");
+        
+        String inputToken = scanner.next();
+        
+        System.out.println("You entered: " + inputToken);
+        scanner.close();
+        */
+        
+    }
+}
 
