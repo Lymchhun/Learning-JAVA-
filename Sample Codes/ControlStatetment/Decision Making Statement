@@ -1,3 +1,5 @@
+//This is the sample java code for beginner
+// you can test the code for each session below by just clearing the multi-line cooment 
 package com.mycompany.controlstatement;
 
 import java.util.HashMap;
