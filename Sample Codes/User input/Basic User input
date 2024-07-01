@@ -6,7 +6,7 @@ public class BasicJava {
 
     public static void main(String[] args) {
         
-        
+        //For the code below, you can just clear the multi-line comment for each session in order to test code for each parts
         Scanner scanner = new Scanner(System.in);//give name : scanner
         
         /*
