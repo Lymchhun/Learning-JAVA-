@@ -1,0 +1,51 @@
+package com.mycompany.basicjava; // Defines the package for this class, organizing it within the 'com.mycompany.basicjava' namespace.
+
+public class FieldsInJavaOOP { // Declares a public class named 'FieldsInJavaOOP'.
+
+    
+    //===========================< Field >====================================
+    //create a new instance field
+    public String Model;//public instance field used to store model of car
+    public String Color;//public instance field used to store color of the car
+    
+    //create static field
+    public static int totalCars;// public static field used to keep track of the total number of car
+    //========================================================================
+    
+    //===========================< Methods >====================================
+    //-----#[1] Display method for the detail of the car
+    public void DisplayDetail()
+    {
+        System.out.print("\n\t\t Model of the Car: " + Model);//print model of the car
+        System.out.print("\n\t\t Color of the Car: " + Color);//Print color of the car
+    }
+    
+    //------#[2] A static method to display the total number of the car
+    public static void DisplayTotalNumberofCar()
+    {
+        System.out.print("\n\t\t The Total Number of the Cars is: " + totalCars);
+    }
+    //========================================================================
+    
+    
+    
+    //create a method to display the detail of the car
+    public static void main(String args[]) { 
+        //create first car object
+        //create a new instance of the 'FieldsInJavaOOP' class
+        FieldsInJavaOOP car1 = new FieldsInJavaOOP();
+        FieldsInJavaOOP car2 = new FieldsInJavaOOP();
+        
+        car1.Model = "Toyota"; //sets model for the car1
+        car1.Color = "Black";
+        FieldsInJavaOOP.totalCars++; //Increments the total number of cars by 1
+ 
+        car2.Model = "Ford"; //sets model for car2
+        car2.Color = "White";
+        FieldsInJavaOOP.totalCars++; //Increments the total number of cars by 1
+        
+        car1.DisplayDetail();
+        car2.DisplayDetail();
+        FieldsInJavaOOP.DisplayTotalNumberofCar();//calls static method "DisplayTotalNumberofCar()" to print the total number of cars
+    }
+}
