@@ -1,0 +1,36 @@
+package com.mycompany.basicjava;
+
+public class ConstructorInJavaOOP {
+    // Fields
+    private int x;
+    private String y;
+
+    //==========< Default Constructor >===================
+    // This constructor initializes fields with default values
+    public ConstructorInJavaOOP() {
+        this.x = 0;
+        this.y = "default";
+    }
+
+    //==========< Parameterized Constructor >===================
+    // This constructor initializes fields with specified values
+    public ConstructorInJavaOOP(int x, String y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    //======< Method to display the values of x and y >============
+    public void display() {
+        System.out.println("x: " + x + ", y: " + y);
+    }
+
+    public static void main(String args[]) {
+        // Creating an object using the default constructor
+        ConstructorInJavaOOP obj1 = new ConstructorInJavaOOP();
+        obj1.display();  // Output: x: 0, y: default
+
+        // Creating an object using the parameterized constructor
+        ConstructorInJavaOOP obj2 = new ConstructorInJavaOOP(10, "example");
+        obj2.display();  // Output: x: 10, y: example
+    }
+}
