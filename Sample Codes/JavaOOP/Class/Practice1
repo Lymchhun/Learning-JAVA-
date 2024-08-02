@@ -1,0 +1,63 @@
+package com.mycompany.basicjava;
+
+/* Instruction:
+Create a Book Class
+Create a class named Book with
+title (String)
+author (String)
+price (double)
+Write a constructor that initializes these properties.
+Implement a method displayDetails that prints the book's title, author, and price.
+Implement a method applyDiscount that takes a percentage as an argument and reduces the
+price by that percentage.
+In the main method:
+Create an instance of Book with sample data.
+Display the book's details.
+Apply a discount.
+Display the book's details again to see the updated price.
+*/
+public class Book {
+    
+    //default field
+    String title, author;
+    double price;
+    
+    //create a constructor
+    //constructor book
+    public Book(String title, String author, double price)
+    {
+        this.title = title;
+        this.author = author;
+        this.price = price;
+    }
+    
+    //create a display detail methods
+    public void displayDetails()
+    {
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Price: " + price + " $");
+    }
+    
+    //create a discount method that discount the price base on the percentage
+    public void applyDiscount(double percentage)
+    {
+        //price = price - price*(percentage/100);
+        price -= price*(percentage/100);
+    }
+    
+    public static void main(String args[]) {
+        //create instance book
+        Book Mybook1 = new Book(" The Legend", " John, F.D", 30.0);
+        
+        //Display Detail
+        Mybook1.displayDetails();
+        
+        //apply discount to the book price
+        Mybook1.applyDiscount(15.0);
+        
+        //Display the price after the discount
+        System.out.println("After Discount: ");
+        Mybook1.displayDetails();
+    }
+}
