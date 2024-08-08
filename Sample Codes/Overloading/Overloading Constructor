@@ -1,0 +1,65 @@
+package com.mycompany.basicjava;
+
+public class Constructors_Overloading {
+
+    //Create Class: customer
+    public static class Customer_info{
+        //Field
+        private String Name;
+        private int age;
+        private String address;
+        
+        //First constructor: no-argument constructor
+        public Customer_info()
+        {
+            this.Name = "Unknown";
+            this.age = 0;
+            this.address = "Unknown";
+        }
+        
+        //second constructor with 1 argument (Name)
+        public Customer_info(String Name)
+        {
+            this.Name = Name;
+            this.age = 0;
+            this.address = "Unknown";           
+        }
+        
+        //third constructor with 2 arguments (Name + Age)
+        public Customer_info(String Name, int age)
+        {
+            this.Name = Name;
+            this.age = age;
+            this.address = "Unknown";           
+        }
+        
+        //Fourth constructor with 3 argument (Name +  Age + Address)
+        public Customer_info(String Name, int age, String Address)
+        {
+            this.Name = Name;
+            this.age = age;
+            this.address = Address;           
+        }
+        
+        //Display method
+        public void DisplayInfo()
+        {
+            System.out.print("Name: " + this.Name);
+            System.out.print(", Age: " + this.age);
+            System.out.println(", and Address: " + this.address);
+        }
+    }
+    public static void main(String[] args) {
+        //create object customer
+        Customer_info Cust1 = new Customer_info(); //use First constructor
+        Customer_info Cust2 = new Customer_info("John"); //use second constructor (Name)
+        Customer_info Cust3 = new Customer_info("Thomas", 20); //use third constructor (Name, Age)
+        Customer_info Cust4 = new Customer_info("Pete", 25, "Phnom Penh"); //use the fourth constructor
+        
+        //Display Information
+        Cust1.DisplayInfo();
+        Cust2.DisplayInfo();
+        Cust3.DisplayInfo();
+        Cust4.DisplayInfo();
+    }
+}
