@@ -1,0 +1,93 @@
+package com.mycompany.basicjava;
+
+public class InheritanceForJavaOOP {
+    
+    //inheritance is key feature--> parent class --> child class
+    //parent class and child class must have a relationship between one another
+    //Parent class (Vehicle) យានជំនិះ --> Child Class (Car, Motorbike, bicycle)
+    //Having sth in common: brake, (go forward), (stop)
+    
+    //Parent class (Pet) --> Child class(cat, dog)
+    //Have sth in common: eat, sleep, .....
+    //Child Class: Dog --> Bark
+    //Child Class: Cat --> Meow
+    
+    
+    //====< Create a parent class or super class >===========
+    static class Pet{
+        //Field
+        String name;
+        int age;
+        
+        //Constructor
+        public Pet(String name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+        
+        //method
+        public void Eat()
+        {
+            System.out.println(name + " at the age of " + age + " years old, is eating");
+        }
+    }
+    //========================================================
+    
+    //==============< Child Class or Sub Class >==============
+    //Mr. John: Pet--> Dog: Bob, 2 years old
+    static class Dog extends Pet
+    {
+        //constructor
+        public Dog(String name, int age)
+        {
+            super(name, age);
+        }
+        
+        public void Bark()
+        {
+            System.out.println(name + " at the age of " + age + " years old, is barking");
+        }
+    }
+    //==========================================================
+    
+        static class Cat extends Pet
+    {
+        //constructor
+        public Cat(String name, int age)
+        {
+            super(name, age);
+        }
+        
+        public void Meow()
+        {
+            System.out.println(name + " at the age of " + age + " years old, is Meowing");
+        }
+    }
+    
+    
+    
+    public static void main(String[] args) {
+        //create object of the Dog subclass
+        Dog MyDog = new Dog("Bob", 2);
+        Pet MyPet = new Pet("Joe", 5);
+        Cat MyCat = new Cat("Tom", 3);
+        //parent object
+        MyPet.Eat();
+        
+        //child object
+        MyDog.Eat();
+        MyDog.Bark();
+        
+        MyCat.Eat();
+        MyCat.Meow();
+        //Child class --> can access possession of parent class
+        //Parent class --> can not access possession of Child Class
+        //Dog, Cat, Spider, Bug,....etc
+        //Dog: Food, Attacking style, livnig style,dfkja;kljf
+        //Cat: 
+        //Spider: 
+        //Bug: 
+    }
+}
+
