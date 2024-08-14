@@ -1,0 +1,38 @@
+package com.mycompany.basicjava;
+
+public class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) //=> constructor
+    {
+        this.name = name;
+        this.age = age;
+    }
+
+    //read and write
+    // Getter for name - read
+    public String getName() {
+        return name;
+    }
+
+    // Getter for age - read
+    public int getAge() {
+        return age;
+    }
+
+    // Setter for name - write
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Setter for age - write
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    // Method to print info
+    public void printInfo() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
