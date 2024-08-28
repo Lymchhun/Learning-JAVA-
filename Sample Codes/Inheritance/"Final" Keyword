@@ -1,0 +1,28 @@
+package com.mycompany.basicjava;
+
+    //---< Parent class >---
+    class Fruit{
+        //Field
+        String Name;
+        
+        //method
+        public final void Weight(){
+            System.out.println("Every fruit has its own weight");
+        }
+    }
+
+    //The ability to modify and the visibility
+    class Mango extends Fruit
+    {
+        
+    }
+
+public class InheritanceForJavaOOP {
+    
+    public static void main(String[] args) {
+//        Fruit Myfruit = new Fruit();
+//        Myfruit.Weight();
+        Mango Mymango = new Mango();
+        Mymango.Weight();
+    }
+}
