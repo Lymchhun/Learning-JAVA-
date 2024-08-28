@@ -1,0 +1,104 @@
+package com.mycompany.basicjava;
+
+    //===< Super Class >========
+    //Super Class -> Main Category: Dog, Cat, Rat, Lion, ....
+    class Animal  //(parent class or Super class)
+    {
+        //Field
+        String name = "Animal";
+        
+        //Constructor
+        Animal()
+        {
+            System.out.println("Animal Constructor");
+        }
+        
+        //another method for sound made by the animal
+        void sound()
+        {
+            System.out.println("This Animal makes a sound");
+        }
+        
+        //another method (eat)
+        void Consumption() //Consume = eat
+        {
+            System.out.println("This Animal eats meat");
+        }
+    }
+    //=============================================================
+
+
+
+
+
+    //===< class Dog >=====================================
+    class Dog extends Animal
+    {
+        //Field
+        String name = "Dog";
+        
+        //constructor
+        Dog()
+        {
+            super(); //Calls the constructor fo the Animal Class
+            System.out.println("Dog Constructor");
+        }
+        
+        //method sound for dog class
+        @Override
+        void sound()
+        {
+            //super.sound();//calls sound method from Animal class
+            System.out.println("Dog makes sound by Barking");
+        }
+        
+    }
+
+    //Another Class ==> Second Category
+    class Bird
+    {
+        //Field
+        String name = "All Types of Bird";//this line
+        
+        //method
+        void sound()
+        {
+            System.out.println("Birds make sound");
+        }
+    }
+
+    class Pigeon extends Bird
+    {
+        //another method for sound
+        void sound()
+        {
+            super.sound();//calling sound method from super class
+            System.out.println("==> That's why Pigeon Makes sound");
+        }
+    }
+
+    class Goose extends Bird
+    {
+        void sound()
+        {
+            super.sound();
+            System.out.println("===> However, Goose Also Makes Sound");
+        }
+    
+    }
+
+public class InheritanceForJavaOOP {
+
+    public static void main(String[] args) {
+        Dog TuTu = new Dog();
+        TuTu.Consumption();
+//        TuTu.sound();
+//        TuTu.DisplayName();
+//        TuTu.Consumption();
+//          Pigeon Pigeon1 = new Pigeon();
+//          Pigeon1.sound();
+//          
+//          Goose Goose1 = new Goose();
+//          Goose1.sound();
+    }
+}
