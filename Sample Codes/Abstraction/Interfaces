@@ -1,0 +1,52 @@
+package com.mycompany.basicjava;
+
+//why do we need interfaces in java oop?
+
+//about Student of Teed
+class StudentofTEED
+{
+    public void Learn(Devicesforlearning Desk)
+    {
+        Desk.code();
+        System.out.println("Students learn Network, Telecom, Electronics");
+    }
+}
+
+//=========================< Learning method for TEED student >=======================
+//Tools or Devices to learn
+interface Devicesforlearning
+{
+    public void code();
+}
+
+
+//[1] Learn using laptop
+class Laptop implements Devicesforlearning
+{
+    public void code()
+    {
+        System.out.println("Learn code with Laptop");
+    }
+}
+
+//[2] Learn using Desktop
+class Desktop implements Devicesforlearning
+{
+    public void code()
+    {
+        System.out.println("Learn code with Desktop");
+    }
+}
+//=====================================================================================
+
+
+public class InterfaceInJavaOOP {
+    public static void main(String args[]) {
+        StudentofTEED John = new StudentofTEED();
+        Devicesforlearning Lap = new Laptop();
+        Devicesforlearning Desk = new Desktop();
+        
+        John.Learn(Lap);//can change between desktop and laptop (or can add more)
+        //can be used with user-input 
+    }
+}
