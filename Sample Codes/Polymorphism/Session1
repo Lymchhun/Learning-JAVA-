@@ -1,0 +1,98 @@
+package com.mycompany.basicjava;
+
+    //[1] - Method Overloading (The Name of the Method is called to be used in multiple ways
+    //[2] - Method Overriding @Override 
+    
+    //create a class of "Animal"
+    //===========================================================
+    class Animal
+    {
+        //[1] - Makesound
+        public void MakeSound()
+        {
+            System.out.println("Animals make sound");
+        }
+        
+        //[2] - Makesound (Number of making sound per day)
+        public void MakeSound(int NumberofTimePerDay)
+        {
+            System.out.println("Animals make sound about " + NumberofTimePerDay + " Times per day");
+        }
+        
+        //[3] - Makesound (Number of making sound per day and per morning)
+        public void MakeSound(int NumberofTimePerDay, int NumberofTimePerMorning) //(int, int)
+        {
+            System.out.println("Animals make sound about " + NumberofTimePerDay + " Times per day and about " + NumberofTimePerMorning + " Times per morning");
+        }
+        
+        //[4] - Makesound (Number of making sound per morning and per day)
+        //short(-32,768 to 32,767)
+        //int ( -2,147,483,648 to 2,147,483,647)
+        public void MakeSound(short NumberofTimePerMorning, int NumberofTimePerDay) //(short, int)
+        {
+            System.out.println("Animals make sound about " + NumberofTimePerMorning + " Times per morning and about " + NumberofTimePerDay + " Times per day");
+        }
+
+        //[5] - FoodConsumption
+        public void FoodConsumption()
+        {
+            System.out.println("Animals consume food");
+        }
+    }
+    //========================================================
+
+    class cat extends Animal
+    {
+        //[1] - Makesound
+        @Override      
+        public void MakeSound()
+        {
+            System.out.println("Cat make sound");
+        }
+        
+        //[2] - Makesound (Number of making sound per day)
+        public void MakeSound(String NumberofTimePerDay)//modified from int to string
+        {
+            System.out.println("Cat make sound: " + NumberofTimePerDay );
+        }
+        
+        //[3] - Makesound (Number of making sound per day and per morning)
+        @Override
+        public void MakeSound(int NumberofTimePerDay, int NumberofTimePerMorning) //(int, int)
+        {
+            System.out.println("Cat make sound about " + NumberofTimePerDay + " Times per day and about " + NumberofTimePerMorning + " Times per morning");
+        }
+        
+        //[4] - Makesound (Number of making sound per morning and per day)
+        //short(-32,768 to 32,767)
+        //int ( -2,147,483,648 to 2,147,483,647)
+        @Override
+        public void MakeSound(short NumberofTimePerMorning, int NumberofTimePerDay) //(short, int)
+        {
+            System.out.println("Cat make sound about " + NumberofTimePerMorning + " Times per morning and about " + NumberofTimePerDay + " Times per day");
+        }
+
+        //[5] - FoodConsumption
+        @Override
+        public void FoodConsumption()
+        {
+            System.out.println("Cat consume food");
+        }
+    }
+public class PolymorphismForJavaOOP {
+    
+    public static void main(String args[]) {
+        Animal Animal1 = new Animal();
+        short shortNumberofSound = 100;
+        
+        //--< Method Overloading >----
+//        Animal1.MakeSound();
+//        Animal1.MakeSound(5);//NumberofTimePerDay
+//        Animal1.MakeSound(shortNumberofSound, 3); //NumberofTimePerDay and NumberofTimePerMorning
+        
+        cat cat1 = new cat();
+        cat1.MakeSound();
+        cat1.MakeSound(4);
+        cat1.MakeSound(shortNumberofSound, 120);
+    }
+}
