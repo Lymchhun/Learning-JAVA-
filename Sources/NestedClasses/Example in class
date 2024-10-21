@@ -1,0 +1,57 @@
+package com.mycompany.basicjava;
+
+//====< Nested Classes >============
+//1. --> Static Nested Class
+//2. --> Non-Static Nested Class
+
+//-----< Nested Class >-----
+class NestedClass
+{
+    //constructor
+    NestedClass()
+    {
+        System.out.println("Display Constructor");
+    }
+    
+    //static class
+    static class StaticClass
+    {
+        void DisplayText()
+        {
+            System.out.println("Displayed from Static CLass");
+        }
+    }
+    
+    //non-static class
+    class NonStaticClass
+    {
+        NonStaticClass()
+        {
+        }
+        void DisplayText()
+        {
+            System.out.println("Displayed from Non-Static CLass");
+        }
+    }
+}
+
+public class NEstedAndAnonymousClasses {
+    
+    public static void main(String[] args) {
+        //instantiating on the static nested class
+        NestedClass.StaticClass StaCl1 = new NestedClass.StaticClass();
+        StaCl1.DisplayText();
+        
+        //instantiating on outer class
+        NestedClass Outer = new NestedClass();
+        
+        //instantiating on the non-static nested class
+        NestedClass.NonStaticClass NonSta = Outer.new NonStaticClass();
+        NonSta.DisplayText();
+        
+    }
+}
+
+//---< outer class: --> class 'A'
+//---< Static class: --> class 'B'
+//---< Non-Static class: --> class 'C'
