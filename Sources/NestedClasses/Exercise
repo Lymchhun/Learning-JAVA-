@@ -1,0 +1,5 @@
+//Exercise for nested class session 1
+1. Create a class University with a static nested class Department and a non-static inner class Student.
+2. In Department, create a method to print the department name.
+3. In Student, create a method to print the student's name and department.
+4. In the main method, instantiate Department and Student, and call their respective methods.
