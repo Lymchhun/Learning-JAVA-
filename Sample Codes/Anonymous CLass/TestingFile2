@@ -1,0 +1,51 @@
+//--------------< Anonymous Class >---------
+//  Last Week we learn about "Nested Class" 
+//  Nested CLass is divided into 2 --> NonStatic and Static
+//  Anonymous class
+//  ->> Extends super class
+//  ->> Implements interface
+//  ->> Pros: Create instance anywhere and whenever they are required
+
+//-------------< Review on Abstract Class >-----------
+//  Abstract class: --> to let them know what are the methods used in your programming, 
+//  but not to let them know the whole process of each methods
+
+//-------------< Review Back on interface >-----------
+//  Definition: interface --> a constract that defines a set of methods that a specific class must implement
+//  but, without providing any method implementation itself.
+
+// nested class
+
+
+package BasicJavaVersion2;
+
+class Button
+{
+    //inner inteface for click
+    interface Click
+    {
+        void Onclick();
+    }
+    
+    public void checkOnclick(Click checked)
+    {
+//        System.out.println("Button is clecked");
+        checked.Onclick();
+    }
+}
+public class AnonymousClass 
+{
+    public static void main(String args[]) 
+    {
+        //instantiate a button object
+        Button button  = new Button();
+        
+        //set Onclick method using anonymous inner class
+        button.checkOnclick(new Button.Click() {
+            @Override
+            public void Onclick() {
+                System.out.println("Anonymous inner class: Button was clicked");
+            }
+        });
+    }
+}
