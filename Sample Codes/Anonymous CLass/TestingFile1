@@ -1,0 +1,100 @@
+//--------------< Anonymous Class >---------
+//  Last Week we learn about "Nested Class" 
+//  Nested CLass is divided into 2 --> NonStatic and Static
+//  Anonymous class
+//  ->> Extends super class
+//  ->> Implements interface
+//  ->> Pros: Create instance anywhere and whenever they are required
+
+//-------------< Review on Abstract Class >-----------
+//  Abstract class: --> to let them know what are the methods used in your programming, 
+//  but not to let them know the whole process of each methods
+
+package BasicJavaVersion2;
+
+abstract class Button
+{
+    public abstract void Press();
+    public abstract void Click();
+}
+
+
+//example: 1 feature --> 30 functions/methods
+// if davith stores all the functions inside only one class
+// --> a team with 3 members
+
+
+
+
+
+
+
+class Person
+{
+    //create a method "Name"
+    public void Name()
+    {
+        System.out.println("Default Name");
+    }
+    
+    
+    
+//    //create second function
+//    @Override
+//    public void Name(String Name)
+//    {
+//        
+//    }
+}
+public class AnonymousClass 
+{
+    public static void main(String args[]) {
+//        Person Person1 = new Person(); //create object1 for class Person
+//        Person1.Name();
+//        //Example: I want to create a new object for the name "John"
+//        Person Person2 = new Person()
+//        {
+//            @Override
+//            public void Name()
+//            {
+//                System.out.println("Name: John");
+//            }
+//        };
+//        Person2.Name();
+//        
+//        //Example
+//        Person Person3 = new Person()
+//        {
+//            @Override
+//            public void Name()
+//            {
+//                System.out.println("Name: Davith");
+//            }
+//        };
+//        Person3.Name();
+          
+//      instantiate a button object using an anonymous inner class
+        Button button1 = new Button()
+        {
+            @Override
+            public void Press()
+            {
+                System.out.println("Button1 is pressed");
+            }
+            
+            @Override
+            public void Click()
+            {
+                System.out.println("Button1 is Clicked");
+            }
+        };
+        button1.Click();
+        button1.Press();
+
+
+
+
+
+
+    }
+}
