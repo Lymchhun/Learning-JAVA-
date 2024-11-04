@@ -1,0 +1,46 @@
+package BasicJavaVersion2;
+
+//Check Input Exception
+// --> Simple task: Check Input Integer Number
+import java.util.Scanner;
+
+class CustomNumberFormatException extends Exception
+{
+    public CustomNumberFormatException(String message)
+    {
+        super(message);
+    }
+}
+public class ExceptionInJava {
+    public static void main(String[] args) {
+        try {
+            int number = getInputInteger();
+            System.out.println("You entered: " + number);
+        }
+        catch(CustomNumberFormatException e)
+        {
+            System.out.println("Error: "+ e.getMessage());
+        }
+    }
+
+
+    //create a method to read an integer input
+    public static int getInputInteger() throws CustomNumberFormatException
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Please Enter an integer: ");
+        String input = scanner.nextLine();
+
+        //Parse the input and throw exception if invalid
+        try
+        {
+            return Integer.parseInt(input);
+        }
+        catch(NumberFormatException e)
+        {
+            throw new CustomNumberFormatException("Invalid Input "+ input +  "is not an integer");
+        }
+    }
+}
+
+
