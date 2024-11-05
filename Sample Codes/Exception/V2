@@ -1,0 +1,36 @@
+package BasicJavaVersion2;
+
+import java.util.Scanner;
+import java.io.FileNotFoundException;
+import java.io.File;
+
+public class ExceptionInJava {
+    public static void main(String[] args) {
+        //using try-catch block in this concept
+        try
+        {
+            //Attempt to read a file
+            ReadFile("example.txt");
+        }
+        catch(FileNotFoundException e)
+        {
+            //handle exception if the file is not found
+            System.out.println("Error: FILE NOT FOUND");
+        }
+    }
+    
+    //create a method to attempt (ប៉ុនប៉ង) to read file and if the file is not exist --> Throws --> FileNotFoundException
+    public static void ReadFile(String fileName) throws FileNotFoundException
+    {
+        File file = new File(fileName);
+        Scanner scanner = new Scanner(file);//Might/May throws an exception
+        System.out.println("File opened Successfully");
+        
+        //print file content
+        while(scanner.hasNextLine())
+        {
+            System.out.println(scanner.nextLine());
+        }
+        scanner.close();
+    }
+}
