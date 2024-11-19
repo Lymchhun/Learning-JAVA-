@@ -1,0 +1,21 @@
+package BasicJavaVersion2;
+
+public class WrapperClassInJava {
+    public static void main(String[] args) {
+        //Example1 : Autoboxing and Unboxing with Integer //--< Box >--
+        int num = 10;//primitive data type
+        Integer AutoboxedNum = num; //autobxing primitive (int) to (Integer) object
+//        System.out.println("Boxed Integer: " + AutoboxedNum.toString());
+        Integer numberA = 20;
+        Integer numberB = 20;
+        
+        //compare numberA and numberB using compareTo()
+        Integer result = numberA.compareTo(numberB);
+        System.out.println(result);
+        
+        
+//        Integer UnboxedNum = new Integer(20);//occur due to the way JAVA handles transitions between primitive and wrapper classes
+//        int ManualUnboxedNum = UnboxedNum;
+//        System.out.println("Unboxed Integer: " + ManualUnboxedNum);
+    }
+}
