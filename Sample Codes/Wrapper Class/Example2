@@ -1,0 +1,49 @@
+package BasicJavaVersion2;
+
+public class WrapperClassInJava {
+    public static void main(String[] args) {
+//        //checking on valueOf() method --> converts a primitive type to the corresponding wrapper class object
+//        int num = 100;                   //Primitive type
+//        double num2 = 125.5;            //primitive type
+//        String num3 = "123";
+//        
+//        Integer a = Integer.valueOf(num);//convert from primitive to wrapper object
+//        Double b = Double.valueOf(num2);
+//        Double c = Double.valueOf(num3);
+//        String d = null;   
+//        //primitive -> can't hold null value cuz (NullPointerException
+//        //primitive represent actual data value
+//        //But for null, it is used to indicate the absence of an object reference
+//        //But null works fine with wrapper class cuz wrapper class are object
+//        
+//        
+//        System.out.println("Integer Object a: "+ a);
+//        System.out.println("Double Object b: "+ b);
+//        System.out.println("Double Object c: "+ c);
+//        System.out.println("Integer Object d: "+ d);
+
+
+
+//        //convert a String to an int(primitive)
+//        String Codestr = "77778888";//Throws NumberFormatException if the input string can't parse into an integer
+//        int Codeint = Integer.parseInt(Codestr);
+//        System.out.println("Parsed Integer: "+ Codeint);
+//        float number = 3.4F;//In Java, f and F --> is the suffix that indicates a type of float
+//        
+//        //convert a String to a double(primitive)
+//        String Doublestr = "52.5f";//throws NumberFormatException
+//        double ParsedDouble = Double.parseDouble(Doublestr);//ignore suffix and select only numeric part
+//        System.out.println("Parsed Double: "+ ParsedDouble);
+//        
+//        //Max and Min checking
+//        System.out.println(Integer.MAX_VALUE);
+//        System.out.println(Integer.MIN_VALUE);
+//        System.out.println(Double.MAX_VALUE);
+
+            //checking toString()
+            Integer obj1 = 100;
+            Boolean True = true;
+            System.out.println(obj1.toString());//convert from Integer to String
+            System.out.println(True.toString());//convert from Boolean to String
+    }
+}
