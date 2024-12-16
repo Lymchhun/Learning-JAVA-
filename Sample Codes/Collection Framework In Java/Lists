@@ -1,0 +1,105 @@
+package BasicJavaVersion2;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Stack;
+
+////create a system --> result of the exam --> list order, Name, Score
+//class Student
+//{
+//    //Fields
+//    private int ID;
+//    private String Name;
+//    private double Score;
+//    
+//    //Constructor
+//    public Student(int ID, String Name, double Score)
+//    {
+//        this.ID = ID;
+//        this.Name = Name;
+//        this.Score = Score;
+//    }
+//    
+//    //methods
+//    public int GetID()
+//    {
+//        return ID;
+//    }
+//    
+//    public String GetName()
+//    {
+//        return Name;
+//    }
+//    
+//    public Double GetScore()
+//    {
+//        return Score;
+//    }
+//    
+//    //output or print text
+//    @Override
+//    public String toString()
+//    {
+//        return "| Student" + ID + " |Name- " + Name + " Score-" + Score;
+//    }
+//    
+//}
+
+
+public class CollectionFramework {
+    public static void main(String[] args) {
+//        //Check up the arraylist 
+//        //create list of a class 
+//        List <Student> TEEDG9List = new ArrayList<>();//ArrayList
+//        
+//        //Add Students
+//        TEEDG9List.add(new Student(1, "John", 72.85));
+//        TEEDG9List.add(new Student(2, "Alice", 90.5));
+//        TEEDG9List.add(new Student(3, "Oscar", 50.6));
+//        
+//        //Display students
+//        System.out.println("----< List of Student >-----");
+//        for (Student AllStudent : TEEDG9List)
+//        {
+//            System.out.println(AllStudent);
+//        }
+//        
+//        //check ID and search
+//        int SearchID = 3;
+//        for (Student AllStudent : TEEDG9List)
+//        {
+//            if(AllStudent.GetID() == SearchID)//search at ID : 2
+//            {
+//                System.out.println("Found: " + AllStudent);
+//            }
+//        }
+//        
+//        //remove student
+//        int RemovedID = 3;
+//        TEEDG9List.removeIf(AllStudent -> AllStudent.GetID() == RemovedID);
+//        System.out.println("\n\n Expel Student with ID: " + RemovedID);
+//        for (Student AllStudent : TEEDG9List)
+//        {
+//            System.out.println(AllStudent);
+//        }
+        
+        //create a stack
+        Stack<String> stack = new Stack<>();
+        
+        //Stack of book
+        //push element into stack 
+        stack.push("Book A");
+        stack.push("Book B");
+        stack.push("Book C");
+        
+        //check all the books in stack
+        System.out.println("The Stack of Book: "+ stack);
+        System.out.println("The Last Book: "+ stack.peek());
+        System.out.println(" Pop: "+ stack.pop());
+        System.out.println(" After Pop: "+ stack);
+        //search history - most recent search - LIFO: Last In, First Out
+        //suuport on Navigation
+
+    }   
+}
+
